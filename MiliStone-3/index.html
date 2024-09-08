@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Dynamic Resume Builder with Form</h1>
+    <form id="resume-form">
+      <fieldset id="resume-profile">
+        <legend id="profile">Profile</legend>
+        <label for="profilePic"></label>
+        <input type="file" name="profilePic" id="profilePicInput" accept="image/*" />
+        <input type="text" id="resume-title" placeholder="Enter Title Name" required />
+        <input type="text" id="what-you-are" placeholder="What are you: " />
+        <br />
+        <label for="summary">Summary</label>
+        <textarea
+          id="summary"
+          rows="5"
+          placeholder="Write a brief summary about yourself."
+          required
+        ></textarea>
+      </fieldset>
+      <hr />
+
+      <fieldset id="contact-form">
+        <legend>Contact Information</legend>
+        <input type="text" id="firstName" placeholder="First Name" required />
+        <input type="text" id="lastName" placeholder="Last Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+      </fieldset>
+      <hr />
+
+      <fieldset id="education-form">
+        <legend>Education</legend>
+        <input type="text" id="schoolName" placeholder="School Name" required />
+        <input type="text" id="degree" placeholder="Degree" required />
+        <input type="text" id="graduationDate" placeholder="Graduation Date" required />
+        <textarea
+          id="educationDescription"
+          rows="4"
+          placeholder="Write something about your education."
+        ></textarea>
+      </fieldset>
+      <hr />
+
+      <fieldset id="work-experience-form">
+        <legend>Work Experience</legend>
+        <input type="text" id="designation" placeholder="Designation" required />
+        <input type="text" id="companyName" placeholder="Company Name" required />
+        <input type="text" id="position" placeholder="Position" required />
+        <input type="text" id="startDate" placeholder="Start Date" required />
+        <input type="text" id="endDate" placeholder="End Date" />
+      </fieldset>
+      <hr />
+
+      <fieldset id="skills-form">
+        <legend>Skills</legend>
+        <input
+          type="text"
+          id="skills"
+          placeholder="Enter your skills separated by commas"
+        />
+      </fieldset>
+      <hr />
+
+      <fieldset id="additional-information-form">
+        <legend>Additional Information</legend>
+        <input type="text" id="city" placeholder="City" required />
+        <input type="text" id="state" placeholder="State" required />
+        <input type="text" id="country" placeholder="Country" required />
+        <input type="text" id="github" placeholder="GitHub" />
+        <input type="text" id="linkedin" placeholder="LinkedIn" />
+      </fieldset>
+      <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resumeOutput" style="display:none;">
+      <!-- Generated resume will appear here -->
+      <img id="output-profilePic" alt="Profile Pic" style="width:150px;height:150px;" />
+      <h1 id="output-title"></h1>
+      <p id="output-what-you-are"></p>
+      <p id="output-summary"></p>
+      <h3>Contact Information</h3>
+      <p id="output-contact"></p>
+      <h3>Education</h3>
+      <p id="output-education"></p>
+      <h3>Work Experience</h3>
+      <p id="output-work-experience"></p>
+      <h3>Skills</h3>
+      <p id="output-skills"></p>
+      <h3>Additional Information</h3>
+      <p id="output-additional"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
